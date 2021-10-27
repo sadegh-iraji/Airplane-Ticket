@@ -1,0 +1,315 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+
+  <!-- ************************************* filter ************************************* -->
+
+  <filter>
+    <filter-name>SignUpFilter</filter-name>
+    <filter-class>ir.maktab.flightticket.filter.SignUpFilter</filter-class>
+  </filter>
+
+  <filter>
+    <filter-name>SignInFilter</filter-name>
+    <filter-class>ir.maktab.flightticket.filter.SignInFilter</filter-class>
+  </filter>
+
+  <filter>
+    <filter-name>NewAirlineFilter</filter-name>
+    <filter-class>ir.maktab.flightticket.filter.adminfilters.NewAirlineFilter</filter-class>
+  </filter>
+
+  <filter>
+    <filter-name>BuyTicketFilter</filter-name>
+    <filter-class>ir.maktab.flightticket.filter.customerfilters.BuyTicketFilter</filter-class>
+  </filter>
+
+  <!-- ************************************* filter mapping ************************************* -->
+
+  <filter-mapping>
+    <filter-name>BuyTicketFilter</filter-name>
+    <url-pattern>/buyTicket</url-pattern>
+  </filter-mapping>
+
+  <filter-mapping>
+    <filter-name>NewAirlineFilter</filter-name>
+    <url-pattern>/newAirlineConfirm</url-pattern>
+  </filter-mapping>
+
+  <filter-mapping>
+    <filter-name>SignInFilter</filter-name>
+    <url-pattern>/signInConfirm</url-pattern>
+  </filter-mapping>
+
+  <filter-mapping>
+    <filter-name>SignUpFilter</filter-name>
+    <url-pattern>/signUpConfirm</url-pattern>
+  </filter-mapping>
+
+  <!-- ************************************* servlet ************************************* -->
+
+  <servlet>
+    <servlet-name>SignUpServlet</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.SignUp</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>SignUpConfirm</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.SignUpConfirm</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>SignInServlet</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.SignIn</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>SignInConfirm</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.SignInConfirm</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>AdminMain</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.adminservlets.AdminMain</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>AddNewAirline</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.adminservlets.AddNewAirline</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>NewAirlineConfirm</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.adminservlets.NewAirlineConfirm</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>AddNewCoupon</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.adminservlets.AddNewCoupon</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>NewCouponConfirm</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.adminservlets.NewCouponConfirm</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>AddNewOperator</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.adminservlets.AddNewOperator</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>NewOperatorConfirm</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.adminservlets.NewOperatorConfirm</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>OperatorMain</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.operatorservlets.OperatorMain</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>OperatorProfile</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.operatorservlets.OperatorProfile</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>EditUsername</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.EditUsername</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>EditPassword</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.EditPassword</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>AirlineTickets</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.operatorservlets.AirlineTickets</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>AddNewTicket</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.operatorservlets.AddNewTicket</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>NewTicketConfirm</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.operatorservlets.NewTicketConfirm</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>SignOut</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.SignOut</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>CustomerMain</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.customerservlets.CustomerMain</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>CustomerProfile</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.customerservlets.CustomerProfile</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>OriginDestinationChoose</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.customerservlets.OriginDestinationChoose</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>TicketChoose</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.customerservlets.TicketChoose</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>BuyTicket</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.customerservlets.BuyTicket</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>IncreaseBalance</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.customerservlets.IncreaseBalance</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>CustomerTickets</servlet-name>
+    <servlet-class>ir.maktab.flightticket.servlet.customerservlets.CustomerTickets</servlet-class>
+  </servlet>
+
+  <!-- ************************************* servlet mapping ************************************* -->
+
+  <servlet-mapping>
+    <servlet-name>CustomerTickets</servlet-name>
+    <url-pattern>/customerTickets</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>IncreaseBalance</servlet-name>
+    <url-pattern>/increaseBalance</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>BuyTicket</servlet-name>
+    <url-pattern>/buyTicket</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>TicketChoose</servlet-name>
+    <url-pattern>/ticketChoose</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>OriginDestinationChoose</servlet-name>
+    <url-pattern>/originDestinationChoose</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>CustomerProfile</servlet-name>
+    <url-pattern>/customerProfile</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>CustomerMain</servlet-name>
+    <url-pattern>/customerMain</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>SignOut</servlet-name>
+    <url-pattern>/signOut</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>NewTicketConfirm</servlet-name>
+    <url-pattern>/newTicketConfirm</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AddNewTicket</servlet-name>
+    <url-pattern>/addNewTicket</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AirlineTickets</servlet-name>
+    <url-pattern>/airlineTickets</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>EditPassword</servlet-name>
+    <url-pattern>/editPassword</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>EditUsername</servlet-name>
+    <url-pattern>/editUsername</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>OperatorProfile</servlet-name>
+    <url-pattern>/operatorProfile</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>OperatorMain</servlet-name>
+    <url-pattern>/operatorMain</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>NewOperatorConfirm</servlet-name>
+    <url-pattern>/newOperatorConfirm</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AddNewOperator</servlet-name>
+    <url-pattern>/newOperator</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>NewCouponConfirm</servlet-name>
+    <url-pattern>/newCouponConfirm</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AddNewCoupon</servlet-name>
+    <url-pattern>/newCoupon</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>NewAirlineConfirm</servlet-name>
+    <url-pattern>/newAirlineConfirm</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AddNewAirline</servlet-name>
+    <url-pattern>/newAirline</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>AdminMain</servlet-name>
+    <url-pattern>/adminMain</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>SignInConfirm</servlet-name>
+    <url-pattern>/signInConfirm</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>SignInServlet</servlet-name>
+    <url-pattern>/signIn</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>SignUpConfirm</servlet-name>
+    <url-pattern>/signUpConfirm</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>SignUpServlet</servlet-name>
+    <url-pattern>/signUp</url-pattern>
+  </servlet-mapping>
+</web-app>
